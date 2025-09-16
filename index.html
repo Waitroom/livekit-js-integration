@@ -1,9 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Livekit test app</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <link
       rel="stylesheet"
@@ -12,6 +15,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      #participants-area {
+        max-width: 600px;
+      }
+      #participants-area video {
+        width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -24,7 +36,12 @@
               <b>LiveKit URL</b>
             </div>
             <div>
-              <input type="text" class="form-control" id="url" value="ws://localhost:7880" />
+              <input
+                type="text"
+                class="form-control"
+                id="url"
+                value="ws://localhost:7880"
+              />
             </div>
             <div>
               <b>Token</b>
@@ -43,35 +60,76 @@
           <!-- connect options -->
           <div id="options-area">
             <div>
-              <input type="checkbox" class="form-check-input" id="publish-option" checked />
-              <label for="publish-option" class="form-check-label"> Publish </label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="publish-option"
+                checked
+              />
+              <label for="publish-option" class="form-check-label">
+                Publish
+              </label>
             </div>
             <div>
-              <input type="checkbox" class="form-check-input" id="simulcast" checked />
-              <label for="simulcast" class="form-check-label"> Simulcast </label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="simulcast"
+                checked
+              />
+              <label for="simulcast" class="form-check-label">
+                Simulcast
+              </label>
             </div>
             <div>
-              <input type="checkbox" class="form-check-input" id="dynacast" checked />
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="dynacast"
+                checked
+              />
               <label for="dynacast" class="form-check-label"> Dynacast </label>
             </div>
             <div>
-              <input type="checkbox" class="form-check-input" id="adaptive-stream" checked />
-              <label for="adaptive-stream" class="form-check-label"> AdaptiveStream </label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="adaptive-stream"
+                checked
+              />
+              <label for="adaptive-stream" class="form-check-label">
+                AdaptiveStream
+              </label>
             </div>
             <div>
               <input type="checkbox" class="form-check-input" id="force-turn" />
-              <label for="force-turn" class="form-check-label"> Force TURN </label>
+              <label for="force-turn" class="form-check-label">
+                Force TURN
+              </label>
             </div>
             <div>
-              <input type="checkbox" class="form-check-input" id="auto-subscribe" checked />
-              <label for="auto-subscribe" class="form-check-label"> Auto Subscribe </label>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="auto-subscribe"
+                checked
+              />
+              <label for="auto-subscribe" class="form-check-label">
+                Auto Subscribe
+              </label>
             </div>
             <div>
               <input type="checkbox" class="form-check-input" id="e2ee" />
-              <label for="e2ee" class="form-check-label"> E2E Encryption </label>
+              <label for="e2ee" class="form-check-label">
+                E2E Encryption
+              </label>
             </div>
             <div>
-              <select id="preferred-codec" class="custom-select" style="width: auto"></select>
+              <select
+                id="preferred-codec"
+                class="custom-select"
+                style="width: auto"
+              ></select>
             </div>
             <div>
               <select
@@ -160,7 +218,9 @@
                 <option value="signal-reconnect">Signal reconnect</option>
                 <option value="full-reconnect">Full reconnect</option>
                 <option value="resume-reconnect">Resume reconnect</option>
-                <option value="disconnect-signal-on-resume">Signal disconnect on resume</option>
+                <option value="disconnect-signal-on-resume">
+                  Signal disconnect on resume
+                </option>
                 <option value="disconnect-signal-on-resume-no-messages">
                   Signal disconnect on resume no msgs
                 </option>
@@ -172,7 +232,9 @@
                 <option value="force-tls">Force TURN/TLS</option>
                 <option value="subscribe-all">Subscribe all</option>
                 <option value="unsubscribe-all">Unsubscribe all</option>
-                <option value="leave-full-reconnect">Leave Request Full Reconnect</option>
+                <option value="leave-full-reconnect">
+                  Leave Request Full Reconnect
+                </option>
               </select>
               <button
                 id="disconnect-room-button"
@@ -218,8 +280,9 @@
           </div>
 
           <div id="inputs-area">
-            <div> <br>
-              Apply Effects <br>
+            <div>
+              <br />
+              Apply Effects <br />
               <button
                 id="apply-blur-button"
                 class="btn btn-secondary mt-1"
@@ -318,7 +381,7 @@
               </button>
             </div>
           </div>
-          <br>
+          <br />
           <div id="inputs-area">
             <div>
               <select
@@ -394,6 +457,9 @@
     </div>
     <script src="/src/demo.ts" type="module"></script>
     <!-- for icons -->
-    <script src="https://kit.fontawesome.com/7c1c4c7e9c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7c1c4c7e9c.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
